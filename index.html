@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Do you hate me? 💌</title>
+<meta name="description" content="I need to know the truth..." />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="hearts-layer" id="heartsLayer" aria-hidden="true"></div>
+
+  <main class="stage">
+
+    <!-- STAGE 1: ASK -->
+    <section class="card" id="askCard" role="region" aria-live="polite">
+      <div class="emoji-wrap">
+        <span class="big-emoji" id="mainEmoji">🥺</span>
+      </div>
+
+      <h1 class="question" id="mainQuestion">Do you hate me?</h1>
+      <p class="subtitle" id="mainSubtitle">I need to know the truth... 💭</p>
+
+      <div class="button-row">
+        <button type="button" class="btn btn-yes" id="yesBtn" aria-label="Yes">
+          Yes ❤️
+        </button>
+        <button type="button" class="btn btn-no" id="noBtn" aria-label="No">
+          No 😢
+        </button>
+      </div>
+    </section>
+
+    <!-- STAGE 2: REASON -->
+    <section class="card" id="reasonCard" hidden>
+      <div class="emoji-wrap">
+        <span class="big-emoji">😢</span>
+      </div>
+      <h1 class="question">Why do you hate me?</h1>
+      <p class="subtitle">Tell me... I can take it 💔</p>
+
+      <form id="reasonForm" class="reason-form">
+        <textarea
+          id="reasonInput"
+          class="reason-textarea"
+          placeholder="Type your reason here..."
+          maxlength="300"
+          rows="4"
+          aria-label="Why do you hate me"
+        ></textarea>
+        <button type="submit" class="btn btn-yes reason-submit">Send 💌</button>
+      </form>
+    </section>
+
+    <!-- STAGE 3: GIFT -->
+    <section class="card" id="giftCard" hidden>
+      <div class="emoji-wrap">
+        <span class="big-emoji">🎁</span>
+      </div>
+      <h1 class="question">Wait... I have something for you</h1>
+      <p class="subtitle">Click to open it 👀</p>
+
+      <div class="button-row">
+        <button type="button" class="btn btn-no" id="giftOpenBtn" aria-label="Click to open the gift">
+          Click to open 🎁
+        </button>
+        <button type="button" class="btn btn-yes" id="sorryBtn" aria-label="Sorry">
+          Sorry Baba! 🙏
+        </button>
+      </div>
+
+      <p class="gift-hint" id="giftHint" hidden>psst... just click Sorry instead 👉</p>
+    </section>
+
+    <!-- STAGE 4: FINAL -->
+    <section class="card success-card" id="finalCard" hidden aria-live="polite">
+      <div class="success-emoji">🥺❤️</div>
+      <h1 class="success-title">I'm Genuinely sorry ❤️</h1>
+      <p class="success-line">I never want to make you upset.</p>
+      <p class="success-line success-line-question" id="echoedReason"></p>
+
+      <audio id="voiceNote" preload="metadata"></audio>
+      <button type="button" class="btn btn-yes replay-btn" id="replayBtn">🔊 Yeh Suno</button>
+    </section>
+
+  </main>
+
+  <div class="burst-layer" id="burstLayer" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
