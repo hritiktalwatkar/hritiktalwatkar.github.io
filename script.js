@@ -1194,7 +1194,7 @@
       ) {
 
         echoedReason.textContent =
-          `${capturedReason}" — Hope so tu muzhe maaf kardegi🥺❤️`;
+          `"${capturedReason}" — Hope so tu muzhe maaf kardegi🥺❤️`;
 
       }
 
