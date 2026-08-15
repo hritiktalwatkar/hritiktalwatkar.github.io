@@ -164,10 +164,11 @@ body {
 
 .button-row {
   display: flex;
-  gap: 16px;
+  flex-direction: column;
+  gap: 14px;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+  width: 100%;
 }
 
 .btn {
