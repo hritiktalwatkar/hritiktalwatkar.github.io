@@ -494,53 +494,48 @@
 
     function enterEscapeMode() {
 
-      if (isEscaping) {
+    if (isEscaping) {
         return;
-      }
+    }
 
-
-      const rect =
+    const rect =
         button.getBoundingClientRect();
 
-
-      spacerEl =
+    spacerEl =
         document.createElement('span');
 
-
-      spacerEl.className =
+    spacerEl.className =
         'evasive-spacer';
 
-
-      spacerEl.setAttribute(
+    spacerEl.setAttribute(
         'aria-hidden',
         'true'
-      );
+    );
 
-
-      button.insertAdjacentElement(
+    button.insertAdjacentElement(
         'afterend',
         spacerEl
-      );
+    );
 
+    /*
+        Freeze the button exactly where it
+        currently is before making it evasive.
+    */
 
-      button.style.left =
+    button.style.left =
         rect.left + 'px';
 
-
-      button.style.top =
+    button.style.top =
         rect.top + 'px';
 
-
-      button.style.width =
+    button.style.width =
         rect.width + 'px';
 
-
-      button.classList.add(
+    button.classList.add(
         'escaping'
-      );
+    );
 
-
-      isEscaping =
+    isEscaping =
         true;
     }
 
